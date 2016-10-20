@@ -7,9 +7,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Main extends JFrame {
+    private Startpanel startpanel;
 
-//It worked!
+    public Startpanel getGamePanel() {
+        return startpanel;
+    }
+    public class Startpanel {
+        public
 
+    }
 
 
 

@@ -9,11 +9,13 @@ import java.awt.event.ActionListener;
 public class Main extends JFrame {
     private Startpanel startpanel;
 
-    public Startpanel getGamePanel() {
+    public Startpanel getStartpanelPanel() {
         return startpanel;
     }
     public class Startpanel {
-        public
+        public Startpanel(){
+
+        }
 
     }
 

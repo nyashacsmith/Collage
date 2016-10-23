@@ -16,60 +16,77 @@ public class Main extends JFrame {
 //        g.setColor(Color.BLACK);
 //
 //    }
-    private Startpanel startpanel;
+    //private Startpanel startpanel;
 
 
-    JFrame frame = new JFrame ();
-
-    JPanel j = new JPanel(new GridBagLayout());
-    Startpanel home = new Startpanel();
-
-
-
+    JFrame frame;
+    JPanel home;
+    JButton start;
+    //JPanel j = new JPanel(new GridBagLayout());
+    //Startpanel home;
 
     public Main(){
-        startpanel = new Startpanel();
-        setTitle("Collage!");
-        setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
-        setSize(400, 600);
-//frame.getContentPane().setLayout(new GridLayout(40, 60));
-        add(new Startpanel());
-        setVisible(true);
+        frame = new JFrame();
+        home = new JPanel();
+        start = new JButton("Start!");
+        start.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel category = new JPanel();
+                category.add(new JButton("Categories"));
+                frame.getContentPane().removeAll();
+                frame.getContentPane().add(category);
+                frame.revalidate();
+            }
+        });
+
+        //startpanel = new Startpanel();
+        frame.setTitle("Collage!");
+        frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+        frame.setSize(400, 600);
+        home.add(start);
+        frame.add(home);
+        frame.setVisible(true);
     }
 
 
-    public Startpanel getStartpanelPanel() {
+    /*public Startpanel getStartpanelPanel() {
         return startpanel;
-    }
+    }*/
 
-    public class Startpanel extends JPanel {
+    /*public class Startpanel extends JPanel {
         boolean homeScreen = false;
         boolean toCategories = false;
         boolean toQuestions = false;
 
 
-        public Startpanel(){//Figuring out how to color background without wrting over buttons
+        public Startpanel() {//Figuring out how to color background without writing over buttons
             homeScreen = true;
-            add (new JButton ("Start!"));//Implement action listens
-            add (new JButton ("Settings!"));
-            add (new JButton ("Leaderboard!"));
+            JButton start = new JButton("Start!");
+            start.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    JPanel category = new JPanel();
+                    frame.getContentPane().add(category);
+                }
+            })
+            
+            JButton settings = new JButton("Settings!");
+            JButton leaderboard = new JButton("Leaderboard!");
+            add(start);
+            add(settings);
+            add(leaderboard);
         }
-
-
-
-    }
+    }*/
 
 
 
     public static void main(String[] args){
 
         Main m = new Main();
-//        m.setVisible(true);
-//        m.setSize(600,400);
-//        m.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-
-
+        //m.setVisible(true);
+        //m.setSize(600,400);
+        //m.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
 

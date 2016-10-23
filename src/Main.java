@@ -7,31 +7,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Locale;
 
-<<<<<<< HEAD
-
-public class Main extends JFrame {
-    //private StartPanel startPanel;
-    //private GamePanel gamePanel;
-    JFrame frame;
-
-    /*@Override
-    public void paint (Graphics g){
-        super.paint(g);
-        g.fillRect(0, 0, 800, 900);
-        // create background
-        g.setColor(Color.BLACK);
-    }*/
-
-    public Main(){
-        frame = new JFrame();
-        setTitle("Collage!");
-        setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
-        setSize(400, 600);
-        //frame.getContentPane().setLayout(new GridLayout(40, 60));
-        setVisible(true);
-    }
-
-=======
 public class Main extends JFrame {
 //    @Override
 //    public void paint (Graphics g){
@@ -46,7 +21,17 @@ public class Main extends JFrame {
 
     JFrame frame;
     JPanel home;
+
     JButton start;
+    JButton settings;
+    JButton leaderboard;
+
+    JButton disney;
+    JButton anime;
+    JButton animals;
+    JButton music;
+    JButton veganism;
+    JButton random;
     //JPanel j = new JPanel(new GridBagLayout());
     //Startpanel home;
 
@@ -54,22 +39,39 @@ public class Main extends JFrame {
         frame = new JFrame();
         home = new JPanel();
         start = new JButton("Start!");
+        settings = new JButton("Settings!");
+        leaderboard = new JButton("Leaderboard!");
         start.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JPanel category = new JPanel();
-                category.add(new JButton("Categories"));
+                JPanel categories = new JPanel();
+                disney = new JButton("Disney!");
+                anime = new JButton("Anime/Manga!");
+                animals = new JButton("Animals!");
+                veganism = new JButton("Veganism :(");
+                music = new JButton("Music!");
+                random = new JButton("Random!");
+                categories.add(disney);
+                categories.add(anime);
+                categories.add(animals);
+                categories.add(veganism);
+                categories.add(music);
+                categories.add(random);
+
                 frame.getContentPane().removeAll();
-                frame.getContentPane().add(category);
+                frame.getContentPane().add(categories);
                 frame.revalidate();
             }
         });
 
-        //startpanel = new Startpanel();
         frame.setTitle("Collage!");
         frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
         frame.setSize(400, 600);
+        
         home.add(start);
+        home.add(settings);
+        home.add(leaderboard);
+
         frame.add(home);
         frame.setVisible(true);
     }
@@ -106,7 +108,6 @@ public class Main extends JFrame {
 
 
 
->>>>>>> 1338860ef2ceb1e11f79a21b14021a3a4b218d83
     public static void main(String[] args){
         Main m = new Main();
         //m.setVisible(true);

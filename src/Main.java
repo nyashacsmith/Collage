@@ -8,12 +8,24 @@ import java.awt.event.ActionListener;
 import java.util.Locale;
 
 public class Main extends JFrame {
+//    @Override
+//    public void paint (Graphics g){
+//        super.paint(g);
+//        g.fillRect(0, 0, 800, 900);
+//        // create background
+//        g.setColor(Color.BLACK);
+//
+//    }
     private Startpanel startpanel;
+
 
     JFrame frame = new JFrame ();
 
     JPanel j = new JPanel(new GridBagLayout());
-    Startpanel p = new Startpanel();
+    Startpanel home = new Startpanel();
+
+
+
 
     public Main(){
         startpanel = new Startpanel();
@@ -42,19 +54,6 @@ public class Main extends JFrame {
             add (new JButton ("Settings!"));
             add (new JButton ("Leaderboard!"));
         }
-
-//        @Override
-//        public void paint (Graphics g){
-//            super.paint(g);
-//            g.fillRect(0, 0, 800, 900);
-//            // create background
-//            g.setColor(Color.BLACK);
-//
-//        }
-
-
-
-
 
 
 

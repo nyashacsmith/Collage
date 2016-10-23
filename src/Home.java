@@ -14,7 +14,7 @@ public class Home {
     public class GamePanel extends JPanel {
         public GamePanel() {
             JButton start = new JButton("Start!");
-            JButton settings = new JButton("Setttings!");
+            JButton settings = new JButton("Settings!");
             JButton leaderboard = new JButton("Leaderboard");
 
             Box box = Box.createVerticalBox();
@@ -25,5 +25,11 @@ public class Home {
             add(box);
 
         }
+    }
+
+    //Created by Mariah Cowling on 10/23/16
+
+    public class Settings extends JPanel {
+
     }
 }

@@ -1,4 +1,4 @@
-/**
+package Collage; /**
  * Created by cierralewis on 10/23/16.
  */
 import javax.swing.*;

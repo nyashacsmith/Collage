@@ -1,3 +1,5 @@
+package Collage;
+
 import javax.swing.*;
 
 /**

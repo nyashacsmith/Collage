@@ -115,8 +115,6 @@ public class Main extends JFrame implements ActionListener{
         String label = Integer.toString(j) + ". " + questions[num - 1].question;
         JLabel q1 = new JLabel(label);
         if (seconds >= 0) {
-            //speed += 1000;
-            //going through each panel
 
             timer.start();
 
@@ -154,7 +152,6 @@ public class Main extends JFrame implements ActionListener{
                     frame.getContentPane().removeAll();
                     frame.getContentPane().add(questionPanel[num - 1]);
                     frame.revalidate();
-                    //frame.repaint();
                 }
             });
             questionPanel[num - 1].add(b);
@@ -165,7 +162,7 @@ public class Main extends JFrame implements ActionListener{
         frame.getContentPane().removeAll();
         frame.getContentPane().add(questionPanel[num - 1]);
         frame.revalidate();
-        //frame.repaint();
+    
 
 
     }
